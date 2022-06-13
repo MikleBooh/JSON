@@ -1,0 +1,13 @@
+{
+"firstName": "Mikle",
+"secondName": "Cooper",
+"thitdName": "Anatolevich",
+"age": "31",
+"adress" : {
+	"sreet": "Kostromskoy prospect",
+	"house": "Dom 22",
+	"kvartira": "34",
+	"postCode": "197013"
+}, 
+"wantedSalary": "is three hundred baks",
+}
