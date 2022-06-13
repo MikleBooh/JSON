@@ -1,1 +1,28 @@
+Ext.define('myCoolStore', {
+    extend: 'Ext.data.Store',
+    
+    constructor: function(cfg) {
+        var me = this;
+        cfg = cfg || {};
+        me.callParent([Ext.Object.merge({
+            proxy: {
+                type: 'ajax',
+                withCredentials: true,
+                reader: {
+                    type: 'json',
+                    rootProperty: 'results'
+                },
+                listeners: {
+                    exception: {
+                        fn: me.onAjaxException,
+                        scope: me
+                    }
+                }
+            }
+        }, cfg)]);
+    },
 
+    onAjaxException: function(proxy, response, operation, eOpts) {
+        // ..
+    }
+});
